@@ -72,7 +72,6 @@
         width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
-        margin: 0;
         margin-left: auto;
         margin-right: auto;
     }
@@ -527,10 +526,6 @@
     }
     .footer {
         background-color:var(--footer-background-color);
-        width: 1440px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -563,7 +558,6 @@
         color:var(--footer-text-color);
     }
     .footer-soc {
-        width: 208px;
         margin-left: 120px;
     }
     .footer-soc-title {
@@ -604,8 +598,7 @@
         height: 24px;
     }
     .footer-modal {
-        width: 453px;
-        margin-left: 80px;
+        margin-left: auto;
     }
     .footer-modal-title {
         margin-bottom: 16px;
@@ -616,21 +609,19 @@
         color: #FFFFFF;
     }
     .footer-form {
-        width: 100%;
         display: flex;
-        box-sizing: border-box;
-        align-items: center;
-        justify-content: center;
     }
     .footer-form-container {
-        display: flex;
-        box-sizing: border-box;
-        width: 100%;
+
     }
     .footer-modal-input {
         width: 264px;
         height: 40px;
+        font-weight: 400;
         padding-left: 16px;
+        font-size: 12px;
+        line-height: 1.20em;
+        color: #FFFFFF;
         background-color: transparent;
         border: 1px solid #FFFFFF;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -680,11 +671,10 @@
     }
     .modal {
         width: 408px;
-        min-height: 584px;
         position: absolute;
         top: 50%;
         left: 50%;
-        padding: 24px;
+        padding: 72px 24px 24px;
         transform: translate(-50%, -50%) scale(1);
         transition: transform var(--transition-duration)
         cubic-bezier(0.4, 0, 0.2, 1);
@@ -710,6 +700,9 @@
         border-radius: 50%;
         background: #E7E9FC;
         border: 1px solid rgba(0, 0, 0, 0.1);
+        transition-property: background-color;
+        transition-duration: var(--transition-duration) ;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     }
     .modal-close:is(:hover, :focus) {
@@ -728,7 +721,6 @@
     }
         /*-----input-----*/
     .modal-title {
-        margin-top: 48px;
         margin-bottom: 16px;
         font-weight: 500;
         font-size: 16px;
@@ -752,16 +744,18 @@
         width: 100%;
         height: 40px;
         padding-left: 38px;
-
         font-weight: 400;
         font-size: 16px;
         line-height: 1.20em;
         letter-spacing: 0.02em;
         color: #2E2F42;
         background-color: transparent;
-        border: 1px solid #2E2F42;
+        border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
-        outline: transparent;
+        outline: none;
+        transition-property: border-color,fill;
+        transition-duration: var(--transition-duration) ;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     .modal-input:focus {
         border-color: #4D5AE5;
@@ -771,6 +765,7 @@
     }
     .imput-wrap {
         position: relative;
+        margin-top: 4px;
     }
     .modal-imput-icon {
         position: absolute;
@@ -788,10 +783,13 @@
         letter-spacing: 0.04em;
         color: rgba(46, 47, 66, 0.4);
         background-color: transparent;
-        border: 1px solid #2E2F42;
+        border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
-        outline: transparent;
+        outline: none;
         resize: none;
+        transition-property: border-color;
+        transition-duration: var(--transition-duration) ;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     .modal-textarea:focus {
         border-color: #4D5AE5;
@@ -822,6 +820,12 @@
         border: 1px solid #2E2F42;
         border-radius: 2px;
         fill: transparent;
+    }
+    .check-link {
+        font-size: 12px;
+        line-height: 1.13em;
+        letter-spacing: 0.04em;
+        color: #4D5AE5;
     }
     .modal-butoon {
         display: block;
